@@ -75,18 +75,10 @@
             <li><a href="{{ URL::route('datamapel3') }}"><i class="fa fa-circle-o"></i> Pelajaran Kelas III</a></li>
           </ul>
         </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-table"></i> <span>Ruang Kelas</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
+        <li>
+          <a href="{{ URL::route('datakelas') }}">
+          <i class="fa fa-table"></i> <span>Ruang Kelas</span>
           </a>
-          <ul class="treeview-menu">
-            <li><a href="pages/tables/simple.html"><i class="fa fa-circle-o"></i> Kelas I</a></li>
-            <li><a href="pages/tables/data.html"><i class="fa fa-circle-o"></i> Kelas II</a></li>
-            <li><a href="pages/tables/data.html"><i class="fa fa-circle-o"></i> Kelas III</a></li>
-          </ul>
         </li>
         <li class="treeview">
           <a href="#">
@@ -96,13 +88,13 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/tables/simple.html"><i class="fa fa-circle-o"></i> Kelas I</a></li>
+            <li><a href="{{ URL::route('datajadwal1') }}"><i class="fa fa-circle-o"></i> Kelas I</a></li>
             <li><a href="pages/tables/data.html"><i class="fa fa-circle-o"></i> Kelas II</a></li>
             <li><a href="pages/tables/data.html"><i class="fa fa-circle-o"></i> Kelas III</a></li>
           </ul>
         </li>
         <li>
-          <a href="pages/calendar.html">
+          <a href="{{ URL::route('datapengumuman') }}">
             <i class="fa fa-calendar"></i> <span>Pengumuman</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-red">3</small>

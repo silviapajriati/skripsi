@@ -75,41 +75,65 @@ CREATE TABLE `password_resets` (
 
 /*Data for the table `password_resets` */
 
-/*Table structure for table `posts` */
+/*Table structure for table `tbl_detail_jadwal` */
 
-DROP TABLE IF EXISTS `posts`;
+DROP TABLE IF EXISTS `tbl_detail_jadwal`;
 
-CREATE TABLE `posts` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `body` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE TABLE `tbl_detail_jadwal` (
+  `id_jadwal` int(225) NOT NULL AUTO_INCREMENT,
+  `kode_kelas` varchar(100) NOT NULL,
+  `nip` varchar(100) NOT NULL,
+  `kode_mapel` varchar(100) NOT NULL,
+  `jam_selesai` varchar(100) NOT NULL,
+  `jam_mulai` varchar(100) NOT NULL,
+  `hari` varchar(100) NOT NULL,
+  `img_jadwal` varchar(100) NOT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id_jadwal`)
+) ENGINE=MyISAM AUTO_INCREMENT=101 DEFAULT CHARSET=latin1;
 
-/*Data for the table `posts` */
+/*Data for the table `tbl_detail_jadwal` */
 
-insert  into `posts`(`id`,`created_at`,`updated_at`,`title`,`body`) values 
-(1,'2019-08-21 04:40:52','2019-08-21 04:40:52','dd','dddd');
-
-/*Table structure for table `products` */
-
-DROP TABLE IF EXISTS `products`;
-
-CREATE TABLE `products` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `detail` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-/*Data for the table `products` */
-
-insert  into `products`(`id`,`name`,`detail`,`created_at`,`updated_at`) values 
-(1,'h','fhgh',NULL,NULL);
+insert  into `tbl_detail_jadwal`(`id_jadwal`,`kode_kelas`,`nip`,`kode_mapel`,`jam_selesai`,`jam_mulai`,`hari`,`img_jadwal`,`created_at`,`updated_at`) values 
+(59,'K01A','07008','M0119TI','11:30','13:00','Senin','ic_jadwal.png',NULL,NULL),
+(58,'K01A','07007','M0112IS','09:30','10:00','Senin','ic_jadwal.png',NULL,NULL),
+(57,'K01A','07001','M0111BI','07:30','09:30','Senin','ic_jadwal.png',NULL,NULL),
+(56,'K01A','070017','M0118UP','07:00','07:30','Senin','ic_jadwal.png',NULL,NULL),
+(60,'K01A','07009','M01110PJ','07:00','08:30','Selasa','ic_jadwal.png',NULL,NULL),
+(61,'K01A','070010','M01111PC','08:30','09:30','Selasa','ic_jadwal.png',NULL,NULL),
+(62,'K01A','07007','M0112IS','09:30','10:00','Selasa','ic_jadwal.png',NULL,NULL),
+(63,'K01A','070011','M01112AG','10:00','11:30','Selasa','ic_jadwal.png',NULL,NULL),
+(64,'K01A','070012','M01113KS','11:30','13:00','Selasa','ic_jadwal.png',NULL,NULL),
+(65,'K01A','07005','M0116IPS','07:00','09:30','Rabu','ic_jadwal.png',NULL,NULL),
+(66,'K01A','07007','M0112IS','09:30','10:00','Rabu','ic_jadwal.png',NULL,NULL),
+(67,'K01A','070013','M01114BN','10:00','13:00','Rabu','ic_jadwal.png',NULL,NULL),
+(68,'K01A','07006','M0117BIO','07:00','08:30','Kamis','ic_jadwal.png',NULL,NULL),
+(69,'K01A','07007','M0112IS','09:30','10:30','Kamis','ic_jadwal.png',NULL,NULL),
+(70,'K01A','070015','M01116KM','10:00','11:30','Kamis','ic_jadwal.png',NULL,NULL),
+(71,'K01A','070016','M01117BK','11:30','13:00','Kamis','ic_jadwal.png',NULL,NULL),
+(72,'K01A','07001','M0111BI','07:00','09:30','Senin','ic_jadwal.png',NULL,NULL),
+(73,'K01A','07007','M0112IS','09:30','10:00','Jumat','ic_jadwal.png',NULL,NULL),
+(74,'K01A','070013','M01114BN','10:00','11:30','Jumat','ic_jadwal.png',NULL,NULL),
+(75,'K01A','07002','M0113MTK','07:00','09:30','Sabtu','ic_jadwal.png',NULL,NULL),
+(76,'K01A','07007','M0112IS','09:30','10:00','Sabtu','ic_jadwal.png',NULL,NULL),
+(77,'K01A','07004','M0115IPA','10:00','12:00','Sabtu','ic_jadwal.png',NULL,NULL),
+(86,'K01A','070020','M0114PK','09:39','11:30','Selasa','ic_jadwal.png',NULL,NULL),
+(85,'K01A','102011','M0114PK','05:29','14:29','Senin','ic_jadwal.png',NULL,NULL),
+(87,'S2ak','10092','4009','09:00','07:00','Senin','',NULL,NULL),
+(88,'S2ak','07005','M0113MTK','09:00','07:00','Senin','',NULL,NULL),
+(89,'S2ak','07003','M01116KM','14:00','12:00','Selasa','',NULL,NULL),
+(90,'S2ak','07002','M01113KS','11:00','10:00','Rabu','',NULL,NULL),
+(91,'S2ak','070012','M01114BN','10:00','09:00','Kamis','',NULL,NULL),
+(92,'S2ak','070014','M01112AG','10:00','07:00','Jumat','',NULL,NULL),
+(93,'S2ak','07004','M0112IS','09:00','07:00','Saptu','',NULL,NULL),
+(94,'S2ak','07005','M01116KM','11:00','08:00','Saptu','',NULL,NULL),
+(95,'S2ak','10092','4009','10:00','07:00','Selasa','',NULL,NULL),
+(96,'S2ak','10092','M01115WR','10:00','09:00','Rabu','',NULL,NULL),
+(97,'S2ak','10092','M0119TI','12:00','11:00','Kamis','',NULL,NULL),
+(98,'S2ak','10092','M01111PC','10:00','08:00','Jumat','',NULL,NULL),
+(99,'S2ak','10092','M01115WR','12:00','10:00','Saptu','',NULL,NULL),
+(100,'K03B','10092','M01115WR','10:00','08:00','Senin','',NULL,NULL);
 
 /*Table structure for table `tbl_guru` */
 
@@ -151,6 +175,31 @@ insert  into `tbl_guru`(`id_guru`,`nip`,`nama_guru`,`alamat`,`no_telp`,`status`,
 (36,'070016','HENI SUSILO','Kediri','081676554420','Aktif','S1','Tegal','2019-08-16',NULL,'2019-08-24 16:08:35'),
 (40,'10092','Rajif Mahendra','cipondoh','089668951090','Aktif','S1','Tangerang','2019-11-20',NULL,'2019-08-24 16:00:14'),
 (41,'0983535','Rani','Tangerang','094642124','Aktif','S1','Tangerang','2019-08-08','2019-08-24 15:45:34','2019-08-24 15:56:37');
+
+/*Table structure for table `tbl_kelas` */
+
+DROP TABLE IF EXISTS `tbl_kelas`;
+
+CREATE TABLE `tbl_kelas` (
+  `id_kelas` int(225) NOT NULL AUTO_INCREMENT,
+  `kode_kelas` varchar(100) NOT NULL,
+  `kelas` varchar(100) NOT NULL,
+  `sub_kelas` varchar(100) NOT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id_kelas`)
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+
+/*Data for the table `tbl_kelas` */
+
+insert  into `tbl_kelas`(`id_kelas`,`kode_kelas`,`kelas`,`sub_kelas`,`created_at`,`updated_at`) values 
+(1,'K01A','1','A',NULL,NULL),
+(2,'K01B','1','B',NULL,NULL),
+(3,'K02A','2','A',NULL,NULL),
+(4,'K02B','2','B',NULL,NULL),
+(5,'K03A','3','A',NULL,NULL),
+(6,'K03B','3','B',NULL,NULL),
+(7,'S2ak','Tambahan','A',NULL,NULL);
 
 /*Table structure for table `tbl_mapel` */
 
@@ -220,18 +269,20 @@ CREATE TABLE `tbl_pengumuman` (
   `judul` varchar(100) NOT NULL,
   `detail` varchar(1000) NOT NULL,
   `tgl` varchar(100) NOT NULL,
-  `img_p` varchar(100) NOT NULL,
+  `img_p` varchar(100) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id_p`)
-) ENGINE=MyISAM AUTO_INCREMENT=94 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=95 DEFAULT CHARSET=latin1;
 
 /*Data for the table `tbl_pengumuman` */
 
-insert  into `tbl_pengumuman`(`id_p`,`judul`,`detail`,`tgl`,`img_p`) values 
-(80,'Rapat Orang tua','Membahas jadwal terapi.','03-06-2019','ic_pengumuman.png'),
-(81,'Hari Libur','Memperingati Hari Libur Nasional Pancasila.','03-06-2019','ic_pengumuman.png'),
-(93,'Rapat Guru','UAs','20-06-2019',''),
-(84,'Idul fitri','1448 hijriah','19-06-2019',''),
-(85,'Lebaran idul fitri','lebaran','19-06-2019','');
+insert  into `tbl_pengumuman`(`id_p`,`judul`,`detail`,`tgl`,`img_p`,`created_at`,`updated_at`) values 
+(80,'Rapat Orang tua','Membahas jadwal terapi.','03-06-2019','ic_pengumuman.png',NULL,NULL),
+(81,'Hari Libur','Memperingati Hari Libur Nasional Pancasila.','03-06-2019','ic_pengumuman.png',NULL,NULL),
+(93,'Rapat Guru','UAs','20-06-2019','',NULL,NULL),
+(84,'Idul fitri','1448 hijriah','19-06-2019','',NULL,NULL),
+(85,'Lebaran idul fitri','lebaran','19-06-2019','',NULL,NULL);
 
 /*Table structure for table `users` */
 
